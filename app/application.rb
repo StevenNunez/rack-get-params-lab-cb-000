@@ -20,7 +20,7 @@ class Application
         resp.write(@@cart.join("\n"))
       end
     elsif req.path == "/add"
-      @@items.push(req.params['item'])
+      @@cart.push(req.params['item'])
       resp.write("added #{req.params['item']}")
     else
       resp.write "Path Not Found"
