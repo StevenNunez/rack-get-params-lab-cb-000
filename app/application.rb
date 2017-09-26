@@ -21,6 +21,7 @@ class Application
       end
     elsif req.path == "/add"
       @@cart.push(req.params['item'])
+      if @@items.include?
       resp.write("added #{req.params['item']}")
     else
       resp.write "Path Not Found"
