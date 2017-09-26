@@ -15,7 +15,7 @@ class Application
       resp.write handle_search(search_term)
     elsif req.path == "/cart"
       if @@cart.empty?
-        resp.write("Your card is empty")
+        resp.write("Your carr is empty")
       end
     else
       resp.write "Path Not Found"
