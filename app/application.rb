@@ -16,6 +16,8 @@ class Application
     elsif req.path == "/cart"
       if @@cart.empty?
         resp.write("Your cart is empty")
+      else
+        resp.write(@@cart.join("\n"))
       end
     else
       resp.write "Path Not Found"
